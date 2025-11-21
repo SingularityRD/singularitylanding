@@ -277,7 +277,7 @@ def link_pill(text: str, href: str) -> rx.Component:
 
 @rx.memo
 def docpage_footer(path: str):
-    from pcweb.constants import ROADMAP_URL
+    from pcweb.constants import FORUM_URL, ROADMAP_URL
     from pcweb.pages.blog import blogs
     from pcweb.pages.docs import getting_started, hosting
     from pcweb.pages.docs.library import library
@@ -339,7 +339,8 @@ def docpage_footer(path: str):
                         footer_link("FAQ", faq.path),
                         footer_link("Common Errors", errors.path),
                         footer_link("Roadmap", ROADMAP_URL),
-                        footer_link("Use Cases", "/use-cases"),
+                        footer_link("Forum", FORUM_URL),
+                        footer_link("Use Case", "/use-cases"),
                     ],
                 ),
                 class_name="flex flex-wrap justify-between gap-12 w-full",
@@ -348,7 +349,7 @@ def docpage_footer(path: str):
                 rx.box(
                     ph_1(),
                     rx.text(
-                        f"Copyright © {datetime.now().year} Singularity Systems, Inc.",
+                        f"Copyright © {datetime.now().year} Pynecone, Inc.",
                         class_name="font-small text-slate-9",
                     ),
                     dark_mode_toggle(),

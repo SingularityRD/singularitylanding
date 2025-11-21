@@ -5,12 +5,12 @@ from reflex.experimental.client_state import ClientStateVar
 from pcweb.components.numbers_pattern import numbers_pattern
 
 items = [
-    ("Automotive", "Analytics01Icon"),
-    ("Energy Grid", "CreditCardPosIcon"),
-    ("Defense", "ShoppingBasket03Icon"),
-    ("Space", "CloudServerIcon"),
-    ("Smart City", "Database02Icon"),
-    ("Industrial IoT", "MagicWand01Icon"),
+    ("Analytics", "Analytics01Icon"),
+    ("Finance", "CreditCardPosIcon"),
+    ("E-commerce", "ShoppingBasket03Icon"),
+    ("DevOps", "CloudServerIcon"),
+    ("Databases", "Database02Icon"),
+    ("AI Workflows", "MagicWand01Icon"),
 ]
 
 selected_industry = ClientStateVar.create(
@@ -26,11 +26,11 @@ def header() -> rx.Component:
             class_name="flex flex-row gap-2 items-center text-primary-9",
         ),
         rx.el.h2(
-            "Securing Every Sector",
+            "Use Cases by Industry",
             class_name="max-w-full w-full lg:text-3xl text-2xl text-center text-slate-12 font-semibold text-balance word-wrap break-words md:whitespace-pre",
         ),
         rx.el.p(
-            "See what’s secured with Singularity.",
+            "See what’s built with Reflex.",
             class_name="text-slate-9 text-sm font-medium text-center text-balance word-wrap break-words md:whitespace-pre",
         ),
         class_name="flex flex-col gap-4 items-center mx-auto w-full relative overflow-hidden",
@@ -101,12 +101,12 @@ def app_card() -> rx.Component:
         rx.image(
             src=rx.match(
                 selected_industry.value,
-                ("Automotive", "/case_studies/analytics_dashboard.webp"),
-                ("Energy Grid", "/case_studies/bayesline_app.webp"),
-                ("Defense", "/case_studies/sellerx_app.webp"),
-                ("Space", "/case_studies/devops_app.webp"),
-                ("Smart City", "/case_studies/admin_app.webp"),
-                ("Industrial IoT", "/case_studies/ai_workflow.webp"),
+                ("Analytics", "/case_studies/analytics_dashboard.webp"),
+                ("Finance", "/case_studies/bayesline_app.webp"),
+                ("E-commerce", "/case_studies/sellerx_app.webp"),
+                ("DevOps", "/case_studies/devops_app.webp"),
+                ("Databases", "/case_studies/admin_app.webp"),
+                ("AI Workflows", "/case_studies/ai_workflow.webp"),
                 "/case_studies/analytics_dashboard.webp",
             ),
             class_name="w-full lg:h-[33.05038rem] h-[24rem] object-cover rounded-2xl border border-slate-4 z-5 lg:p-4 bg-slate-1 object-top",

@@ -4,6 +4,8 @@ import reflex as rx
 
 from pcweb.components.icons.icons import get_icon
 from pcweb.constants import (
+    DISCORD_URL,
+    FORUM_URL,
     GITHUB_URL,
     LINKEDIN_URL,
     ROADMAP_URL,
@@ -58,6 +60,12 @@ def menu_socials() -> rx.Component:
                 TWITTER_URL,
                 class_name="border-l border-slate-5 border-solid border-y-0 border-r-0",
             ),
+            social_menu_item(
+                "forum",
+                FORUM_URL,
+                class_name="!border-l !border-r border-slate-5 border-solid border-y-0",
+            ),
+            social_menu_item("discord", DISCORD_URL),
             social_menu_item(
                 "linkedin",
                 LINKEDIN_URL,
@@ -154,9 +162,9 @@ def footer() -> rx.Component:
                     ph_1(),
                     class_name="flex flex-col gap-6",
                 ),
-                rx.el.span(
-                    f"© {datetime.now().year} Singularity Systems, Inc.",
-                    class_name="text-slate-9 text-sm",
+                rx.text(
+                    f"© {datetime.now().year} Pynecone, Inc.",
+                    class_name="font-small text-slate-9",
                 ),
                 class_name="flex flex-col justify-between items-start gap-4 self-stretch",
             ),
@@ -186,6 +194,7 @@ def footer() -> rx.Component:
                     footer_link("FAQ", faq.path),
                     footer_link("Common Errors", errors.path),
                     footer_link("Roadmap", ROADMAP_URL),
+                    footer_link("Forum", FORUM_URL),
                     footer_link("Affiliates", "/affiliates"),
                     footer_link("Use Cases", use_cases_page.path),
                 ],

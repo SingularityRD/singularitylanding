@@ -5,6 +5,8 @@ import reflex as rx
 from pcweb.components.button import button
 from pcweb.components.icons import get_icon
 from pcweb.constants import (
+    DISCORD_URL,
+    FORUM_URL,
     GITHUB_URL,
     LINKEDIN_URL,
     ROADMAP_URL,
@@ -54,6 +56,8 @@ def social_menu_item(icon: str, url: str) -> rx.Component:
 
 def menu_socials() -> rx.Component:
     return rx.box(
+        social_menu_item("discord_navbar", DISCORD_URL),
+        social_menu_item("forum", FORUM_URL),
         social_menu_item("twitter", TWITTER_URL),
         social_menu_item("github_navbar", GITHUB_URL),
         social_menu_item("linkedin", LINKEDIN_URL),
@@ -150,6 +154,7 @@ def footer_customer() -> rx.Component:
                     footer_link("FAQ", faq.path),
                     footer_link("Common Errors", errors.path),
                     footer_link("Roadmap", ROADMAP_URL),
+                    footer_link("Forum", FORUM_URL),
                     footer_link("Use Cases", use_cases_page.path),
                     rx.box(class_name="grow"),
                     rx.el.div(
@@ -163,7 +168,7 @@ def footer_customer() -> rx.Component:
             # Socials
             rx.box(
                 rx.text(
-                    f"Copyright © {datetime.now().year} Singularity Systems, Inc.",
+                    f"Copyright © {datetime.now().year} Pynecone, Inc.",
                     class_name="font-small text-slate-9",
                 ),
                 menu_socials(),

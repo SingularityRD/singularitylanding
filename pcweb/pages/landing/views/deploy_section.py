@@ -20,11 +20,11 @@ def header() -> rx.Component:
             class_name="flex flex-row gap-2 items-center text-primary-9",
         ),
         rx.el.h2(
-            "Detect, Defend, and Dominate.",
+            "Deploy, manage, and scale.",
             class_name="max-w-full w-full lg:text-3xl text-2xl text-center text-slate-12 font-semibold text-balance word-wrap break-words md:whitespace-pre",
         ),
         rx.el.p(
-            "Military-grade infrastructure for your digital assets.",
+            "A complete infrastructure for your apps.",
             class_name="text-slate-9 text-sm font-medium text-center text-balance word-wrap break-words md:whitespace-pre",
         ),
         class_name="flex flex-col gap-4 items-center mx-auto w-full relative overflow-hidden",
@@ -80,15 +80,9 @@ def deploy_card() -> rx.Component:
                 class_name="text-slate-9 lg:text-3xl text-2xl font-semibold",
             ),
             rx.el.div(
-                rx.el.span(
-                    "$ singularity shield --active",
-                    class_name="font-mono text-sm text-slate-11",
-                ),
-                rx.el.div(
-                    rx.el.span(
-                        "Status: System Secured. Threat Level: Low.",
-                        class_name="font-mono text-sm text-slate-12",
-                    ),
+                rx.image(
+                    src="/hosting_graphing.svg",
+                    class_name="w-auto h-[1.95rem]",
                 ),
                 ui.link(
                     render_=ui.button(
@@ -135,27 +129,31 @@ def badge_card(component: rx.Component, link: str) -> rx.Component:
 def security_badges() -> rx.Component:
     return rx.box(
         rx.box(
-            rx.el.div(
-                "ISO/SAE 21434",
-                class_name="text-slate-12 text-sm font-semibold",
+            badge_card(
+                rx.el.div(
+                    rx.el.span(
+                        "AICPA",
+                        class_name="text-violet-9 text-base font-semibold",
+                    ),
+                    rx.el.span("SOC 2", class_name="text-slate-9 text-sm font-medium"),
+                    class_name="flex flex-col items-center justify-center",
+                ),
+                security_page.path,
             ),
-            rx.el.div(
-                "ISO 27001",
-                class_name="text-slate-12 text-sm font-semibold",
+            badge_card(
+                rx.el.div(
+                    rx.image(
+                        src="/landing/integrations/light/databricks.svg",
+                        class_name="h-[24px] w-auto pb-0.5",
+                    ),
+                    rx.el.span(
+                        "Partner", class_name="text-slate-9 text-sm font-medium"
+                    ),
+                    class_name="flex flex-col items-center justify-center",
+                ),
+                databricks_page.path,
             ),
-            rx.el.div(
-                "NIST 800-171",
-                class_name="text-slate-12 text-sm font-semibold",
-            ),
-            rx.el.div(
-                "SOC 2 Type II",
-                class_name="text-slate-12 text-sm font-semibold",
-            ),
-            rx.el.div(
-                "FedRAMP Moderate Ready",
-                class_name="text-slate-12 text-sm font-semibold",
-            ),
-            class_name="flex flex-col sm:flex-row gap-3 items-center justify-center text-center",
+            class_name="flex flex-row gap-4 items-center justify-center",
         ),
         class_name="p-6 flex items-center justify-center",
     )
@@ -166,11 +164,11 @@ def security() -> rx.Component:
         rx.box(
             rx.box(
                 rx.el.h2(
-                    "Secure by Design. Resilient by Architecture.",
+                    "Secure by default",
                     class_name="text-slate-12 text-xl lg:text-2xl font-semibold lg:text-start text-center",
                 ),
                 rx.el.h3(
-                    "Our platform's integrity is not an assertion; it's an evidence-backed reality. Architected to exceed the most stringent global standards, our technology is battle-tested by global research institutions and validated in high-stakes environments.",
+                    "SOC 2 compliant with enterprise-grade security and flexible deployment options.",
                     class_name="text-slate-9 text-lg lg:text-2xl font-semibold lg:text-start text-center text-balance",
                 ),
                 class_name="flex flex-col lg:col-span-2 p-10 max-lg:border-b border-slate-3",
@@ -186,24 +184,24 @@ def deploy_content() -> rx.Component:
     return rx.box(
         rx.box(
             feature_card(
-                "zap",
-                "Instant Activation",
-                "Deploy your defense grid in seconds with a single command.",
+                "backend_db",
+                "Build and deploy",
+                "Deploy and scale your Reflex app with a single command.",
             ),
             feature_card(
-                "contributors",
-                "Role-Based Access Control (RBAC)",
-                "Granular permission settings for every member of your security team.",
+                "backend_auth",
+                "Add team members",
+                "Invite team members to your Reflex app and manage their permissions.",
+            ),
+            feature_card(
+                "infinity",
+                "Integrate with CI/CD",
+                "Deploy via GitHub Actions, GitLab CI, or your own custom pipeline.",
             ),
             feature_card(
                 "globe",
-                "Global Sovereign Deployment",
-                "Deploy to any region with compliance to local data sovereignty laws.",
-            ),
-            feature_card(
-                "shield",
-                "Certified Resilience (SOC2 / HIPAA / FedRAMP)",
-                "Enterprise-grade security standards built into the core of the platform.",
+                "Scale to multiple regions",
+                "Deploy your app to multiple regions for high availability and low latency.",
             ),
             feature_card(
                 "analytics",

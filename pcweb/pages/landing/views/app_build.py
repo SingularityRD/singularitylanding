@@ -104,22 +104,16 @@ def slack_alert():
         ),
         rx.el.div(
             rx.el.p(
-                "Alert from Singularity AutoSecOps:",
+                "New message from Reflex",
                 class_name="text-slate-12 text-sm font-semibold",
             ),
             rx.el.p(
-                "Anomaly Detected in Satellite Link 04. Unauthorized signal pattern. Initiating automated containment protocol.",
-                class_name="text-slate-11 text-xs font-medium",
+                "Metrics reached critical level of 93%",
+                rx.el.br(),
+                "Please, check it.",
+                class_name="text-slate-11 text-xs font-medium word-wrap",
             ),
-            rx.el.p(
-                "Action: Rollback + air-gapped revalidation",
-                class_name="text-slate-11 text-xs font-medium",
-            ),
-            rx.el.p(
-                "Status: CONTAINED · SNAPSHOT SAVED · PATCH DEPLOYED",
-                class_name="text-slate-11 text-xs font-medium",
-            ),
-            class_name="flex flex-col gap-1",
+            class_name="flex flex-col",
         ),
         rx.el.span(
             "now",
@@ -136,15 +130,15 @@ def metrics_tabs():
     return rx.el.div(
         rx.el.div(
             rx.el.span(
-                "Status",
+                "All",
                 class_name="text-slate-10 text-xs font-medium size-full text-center bg-slate-2 overflow-hidden flex items-center justify-center",
             ),
             rx.el.span(
-                "Action",
+                "Critical",
                 class_name="text-slate-10 text-xs font-medium size-full text-center overflow-hidden flex items-center justify-center",
             ),
             rx.el.span(
-                "Intel",
+                "Normal",
                 class_name="text-slate-10 text-xs font-medium size-full text-center overflow-hidden flex items-center justify-center",
             ),
             class_name="flex flex-row items-center w-[246px] h-[32px] rounded-[8px] bg-white-1 dark:bg-[#151618] border border-slate-4 dark:border-[#1C2024] divide-x divide-slate-4 dark:divide-[#1C2024] overflow-hidden",
@@ -178,26 +172,20 @@ def metrics_header():
             ),
             # Text
             rx.el.div(
-                "99.82%",
+                "93%",
                 class_name="absolute size-16 left-0 top-0 flex items-center justify-center text-center text-red-10 text-base font-[565] leading-[21px] font-mono z-10",
             ),
             class_name="relative size-16 flex-none",
         ),
         rx.el.div(
             rx.el.span(
-                "Ecosystem Risk Posture",
+                "Metrics",
                 class_name="text-slate-12 text-lg font-semibold",
             ),
             rx.el.div(
-                rx.el.span(
-                    "Fleet Resilience: 99.82%",
-                    class_name="text-slate-11 text-xs font-medium",
-                ),
-                rx.el.span(
-                    "Assets Secured: 12.4M+",
-                    class_name="text-slate-11 text-xs font-medium",
-                ),
-                class_name=f"flex flex-col items-start gap-1 animate-delay-{DELAY_METRICS_BADGE} animate-duration-{DURATION_METRICS_BADGE} animate-slide-in-right animate-ease-out",
+                get_icon("alert"),
+                "Critical Level",
+                class_name=f"text-red-10 dark:text-white bg-red-2 dark:bg-[#641723] border-red-6 dark:border-[#641723] border flex flex-row items-center gap-1.5 text-xs font-medium rounded-md px-1.5 h-[24px] animate-delay-{DELAY_METRICS_BADGE} animate-duration-{DURATION_METRICS_BADGE} animate-slide-in-right animate-ease-out",
             ),
             class_name="flex flex-col gap-2",
         ),
@@ -217,11 +205,11 @@ def metrics_content():
         )
 
     return rx.el.div(
-        metrics_row("Status", "CONTAINED", "Now"),
-        metrics_row("Action", "Rollback", "In Flight"),
-        metrics_row("Intel", "APT41", "Analyzed"),
-        metrics_row("Assets", "12.4M+", "Secured"),
-        metrics_row("Posture", "99.82%", "Live"),
+        metrics_row("Critical", "93%", "Now"),
+        metrics_row("Normal", "32%", "12:42"),
+        metrics_row("Critical", "89%", "09:41"),
+        metrics_row("Normal", "34%", "08:14"),
+        metrics_row("Normal", "12%", "05:36"),
         class_name=f"flex flex-col w-[294px] divide-y divide-slate-4 border-t border-slate-3 animate-slide-in-up animate-delay-{DELAY_METRICS_CONTENT} animate-ease-out animate-duration-{DURATION_METRICS_CONTENT}",
     )
 
@@ -306,13 +294,13 @@ def graph_overview():
         rx.el.div(
             rx.el.div(
                 rx.el.span(
-                    "Live Threat Surface / Attack Vector Analysis",
+                    "Overview",
                     class_name="text-slate-12 text-2xl font-semibold",
                 ),
                 rx.el.div(
                     rx.el.div(
                         rx.el.span(class_name="size-4 rounded-sm bg-violet-8"),
-                        "Breach Attempt / Neutralized",
+                        "Peak Performance",
                         class_name="flex flex-row items-center gap-2 text-xs font-medium text-slate-10",
                     ),
                     rx.el.div(

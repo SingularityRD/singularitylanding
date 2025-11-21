@@ -452,7 +452,7 @@ def new_component_section() -> rx.Component:
                 rx.el.div(
                     ui.navigation_menu.item(
                         render_=link_item(
-                            "AutoSecOps",
+                            "AI Builder",
                             ai_builder_pages.overview.best_practices.path,
                             "builder",
                         ),
@@ -460,7 +460,7 @@ def new_component_section() -> rx.Component:
                     ),
                     ui.navigation_menu.item(
                         render_=link_item(
-                            "Platform",
+                            "Open Source",
                             getting_started.introduction.path,
                             "framework",
                         ),
@@ -469,7 +469,7 @@ def new_component_section() -> rx.Component:
                     ),
                     ui.navigation_menu.item(
                         render_=link_item(
-                            "Solutions", hosting_page.deploy_quick_start.path, "hosting"
+                            "Cloud", hosting_page.deploy_quick_start.path, "hosting"
                         ),
                         unstyled=True,
                     ),
@@ -478,19 +478,19 @@ def new_component_section() -> rx.Component:
                 rx.el.div(
                     ui.navigation_menu.item(
                         render_=link_item(
-                            "AutoSecOps",
+                            "AI Builder",
                             REFLEX_BUILD_URL,
                             "builder",
                         ),
                         unstyled=True,
                     ),
                     ui.navigation_menu.item(
-                        render_=link_item("Platform", framework.path, "framework"),
+                        render_=link_item("Open Source", framework.path, "framework"),
                         class_name="whitespace-nowrap",
                         unstyled=True,
                     ),
                     ui.navigation_menu.item(
-                        render_=link_item("Solutions", hosting_landing.path, "hosting"),
+                        render_=link_item("Cloud", hosting_landing.path, "hosting"),
                         unstyled=True,
                     ),
                     class_name="xl:flex hidden flex-row items-center gap-0 lg:gap-5 2xl:gap-7 m-0 h-full list-none",
@@ -518,7 +518,7 @@ def new_component_section() -> rx.Component:
             ui.navigation_menu.item(
                 ui.navigation_menu.item(
                     render_=link_item(
-                        "Intelligence",
+                        "Pricing",
                         "/pricing",
                         "pricing",
                     ),
@@ -536,7 +536,7 @@ def new_component_section() -> rx.Component:
             ui.navigation_menu.item(
                 rx.link(
                     ui.button(
-                        "Client Portal",
+                        "Sign In",
                         size="sm",
                         variant="secondary",
                         class_name="font-semibold text-secondary-11 whitespace-nowrap",
@@ -550,7 +550,7 @@ def new_component_section() -> rx.Component:
             ui.navigation_menu.item(
                 render_=demo_form_dialog(
                     ui.button(
-                        "Request Access",
+                        "Book a Demo",
                         size="sm",
                         variant="primary",
                         class_name="font-semibold whitespace-nowrap max-xl:hidden",

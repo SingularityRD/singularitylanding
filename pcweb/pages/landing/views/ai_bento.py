@@ -65,33 +65,34 @@ def frontend_card(
 def bento_cards() -> rx.Component:
     return rx.el.div(
         frontend_card(
-            title="AutoSecOps Orchestration",
+            title="Work With UI and Backend in 100% Python",
             description=(
-                "Self-healing infrastructure that responds to attacks in milliseconds without human intervention."
+                "Generate and refine UI and backend in 100% Python.\n"
+                "No JavaScript or frontend frameworks required"
             ),
             image="bento1.webp",
             cols="2",
         ),
         frontend_card(
-            title="Full-Stack Fraud Detection",
-            description="Analyze behavioral biometrics and transaction patterns to prevent financial fraud in real-time.",
+            title="Integrate With Tools",
+            description="Over 100+ integrations are available.",
             image="bento2.webp",
         ),
         frontend_card(
-            title="Cyber Threat Intelligence (CTI)",
-            description="Global threat feeds integrated directly into your firewall to block emerging APTs.",
+            title="Research Web",
+            description="Reflex AI finds the best way to implement new features and fix your code.",
             image="bento3.webp",
         ),
         frontend_card(
-            title="Deep-Web Threat Hunting",
-            description="Our AI agents scour the dark web to identify leaked credentials and potential exploits targeting your assets.",
+            title="Build with Visual References",
+            description="Pass it screenshots, and even video, Figma design",
             image="bento4.webp",
             cols="2",
         ),
         frontend_card(
-            title="Digital Twin Surveillance",
+            title="Test Any App",
             description=(
-                "Visualize your physical assets (drones, servers, turbines) in a real-time 3D security environment."
+                "Reflex simulates real users interaction and debugs the app for you."
             ),
             image="bento5.webp",
             cols="2",

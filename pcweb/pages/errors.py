@@ -241,11 +241,18 @@ def errors() -> rx.Component:
             h1_title(title="Common Errors"),
             rx.box(
                 rx.el.h2(
-                    "We've compiled a list of the most common errors users face when using Reflex. If you have encountered an error that isn't answered here, contact our team for support.",
-                    class_name="font-md text-balance text-slate-10",
+                    "We've compiled a list of the most common errors users face when using Reflex. If you have encountered an error that isn't answered here, feel free to reach out to us on our ",
+                    rx.link(
+                        "Discord",
+                        underline="always",
+                        href=constants.DISCORD_URL,
+                        class_name="text-violet-9",
+                    ),
+                    ".",
                 ),
-                class_name="section-header",
+                class_name="font-md text-balance text-slate-10",
             ),
+            class_name="section-header",
         ),
         errors_content(),
         id="common-errors",

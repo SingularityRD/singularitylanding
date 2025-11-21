@@ -33,10 +33,12 @@ companies_list = [
 companies_case_studies = {
     "dell": {
         "company_name": "Dell",
-        "quote": """Singularity's AutoSecOps caught a ransomware attempt on our satellite uplink that our traditional WAF completely missed.""",
+        "quote": """Reflex has been a game changer.
+        In just a week, I had a demo up and running with excellent performance.
+        It made the project feasible for my support team, helping us build a smooth, efficient interface.""",
         "person": "JL",
         "picture": "/favicon.ico",
-        "role": "CISO, Global Aerospace",
+        "role": "Principal Engineer",
     },
     "autodesk": {
         "company_name": "Autodesk",
@@ -48,10 +50,10 @@ companies_case_studies = {
     },
     "fastly": {
         "company_name": "Fastly",
-        "quote": "Managing security for 50,000 IoT devices was a nightmare. Singularity gave us total visibility and predictive maintenance in one dashboard.",
+        "quote": "Migrating our cybersecurity app from Streamlit to Reflex has been excellent. We quickly built a unified interface connecting BigQuery, Salesforce, and PagerDuty for our 15+ team members. The ease of use and rapid development, supported by your responsive team, made it a great experience.",
         "person": "Emanuele Bonura",
         "picture": "/favicon.ico",
-        "role": "VP of Engineering, Smart City Grid",
+        "role": "Senior SOC Engineer",
     },
     # "unicef": {
     #     "company_name": "Unicef",
@@ -63,7 +65,8 @@ companies_case_studies = {
     # },
     "sellerx": {
         "company_name": "SellerX",
-        "quote": """The predictive maintenance module saved us millions by alerting us to a hardware failure in our data center 48 hours before it happened.""",
+        "quote": """With Reflex, we're able to ingest 100 GB of data and over 500,000 data points daily, all while developing ten times faster than with React and FastAPI.
+        The built-in AG Grid functionality seamlessly integrates, making it the perfect solution for handling and visualizing large-scale data efficiently.""",
         "person": "Mike",
         "picture": "/favicon.ico",
         "role": "Head of AI & Automation",
@@ -155,7 +158,7 @@ def company_card(name: str, id: str) -> rx.Component:
                     companies_case_studies_var.contains(company_cs.value),
                     quote_box(company_cs.value),
                     rx.box(
-                        stat(stat="90% Faster", text="Incident Response"),
+                        stat(stat="1 Million+", text="Apps built with Reflex"),
                         class_name="animate-fade flex justify-center items-center size-full animate-duration-[550ms] animate-ease-out animate-fill-both",
                     ),
                 ),

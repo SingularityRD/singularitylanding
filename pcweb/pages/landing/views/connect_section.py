@@ -13,11 +13,11 @@ def header() -> rx.Component:
             class_name="flex flex-row gap-2 items-center text-primary-9",
         ),
         rx.el.h2(
-            "Ingest Security Telemetry",
+            "Connect to Any Data Source",
             class_name="max-w-full w-full lg:text-3xl text-2xl text-center text-slate-12 font-semibold text-balance word-wrap break-words md:whitespace-pre",
         ),
         rx.el.p(
-            "Centralize logs and signals from every layer of your stack for holistic situational awareness.",
+            "Build powerful data-driven apps with seamless integrations to APIs, databases, Python libraries, and file formats.",
             class_name="text-slate-9 text-sm font-medium text-center text-balance word-wrap break-words md:whitespace-pre",
         ),
         class_name="flex flex-col gap-4 items-center mx-auto w-full relative overflow-hidden",
@@ -50,23 +50,23 @@ def connect_section() -> rx.Component:
         rx.el.div(
             connect_card(
                 "api",
-                "IoT Sensors & Actuators",
-                "Monitor voltage, temperature, and signal integrity directly from hardware.",
+                "API",
+                "Integrate with any REST or GraphQL API to fetch and sync data in real-time",
             ),
             connect_card(
                 "python",
-                "Edge Computing Nodes",
-                "Secure data processing at the source with lightweight agents.",
+                "Python Library/SDK",
+                "Import any Python package to extend functionality with data tools and more",
             ),
             connect_card(
                 "db",
-                "Legacy & Modern IT",
-                "Bridge the gap between vintage mainframes and modern cloud infrastructures.",
+                "Database",
+                "Connect to PostgreSQL, MySQL, MongoDB, or any database to power your app",
             ),
             connect_card(
                 "doc",
-                "Unstructured Logs",
-                "Parse and analyze raw log files from diverse systems for anomaly detection.",
+                "File Types",
+                "Process and display CSV, Excel, PDF, images, and other file formats seamlessly",
             ),
             class_name="w-full grid grid-cols-1 lg:grid-cols-2 lg:border-l border-slate-3",
         ),

@@ -210,14 +210,30 @@ def prompt_box() -> rx.Component:
                 show_default_prompt.value,
                 rx.el.span(
                     rx.el.span(
-                        "“If ‘Cerberus-7’ hits our EV network,",
+                        "Build a dashboard with ",
+                        integration_text(
+                            "Databricks",
+                            "databricks",
+                        ),
+                        "metrics,",
                         class_name="animate-[prompt-box-line] animate-duration-[200ms] animate-ease-out origin-left absolute top-3 left-5 h-10 pointer-events-none",
                     ),
                     rx.el.span(
-                        "isolate nodes, simulate patch, reroute grid.”",
+                        "use ",
+                        integration_text_light_dark(
+                            "Okta",
+                            "okta",
+                        ),
+                        "for auth, ping me on ",
+                        integration_text(
+                            "Slack",
+                            "slack",
+                        ),
                         class_name="animate-[prompt-box-line] animate-duration-[200ms] animate-ease-out origin-left absolute top-13 left-5 h-10 animate-delay-200 animate-fill-both pointer-events-none",
                     ),
                     rx.el.span(
+                        "for critical metrics",
+                        # Cursor
                         rx.el.span(
                             class_name="w-0.5 h-8 bg-slate-12 animate-blink inline-block align-middle animate-fill-both animate-delay-450",
                         ),
@@ -227,7 +243,7 @@ def prompt_box() -> rx.Component:
                 ),
                 rx.el.div(
                     rx.el.textarea(
-                        placeholder="Scanning Network Topology...",
+                        placeholder="What do you want to build?",
                         auto_focus=True,
                         id="prompt",
                         custom_attrs={
@@ -236,6 +252,8 @@ def prompt_box() -> rx.Component:
                             "autoCorrect": "off",
                             "spellCheck": "false",
                         },
+                        required=True,
+                        min_length=5,
                         auto_height=True,
                         enter_key_submit=True,
                         class_name="text-slate-12 text-xl font-medium size-full placeholder:text-slate-9 border-none focus:border-none focus:outline-none outline-none resize-none caret-slate-12 mt-2 resize-none w-full [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-grayA-3 [&::-webkit-scrollbar-thumb]:bg-slate-7 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:rounded-full bg-transparent min-h-[2.5rem] max-h-[10.5rem]",
@@ -291,7 +309,7 @@ def prompt_box() -> rx.Component:
                 id="upload-image-button",
             ),
             ui.button(
-                "[EXECUTE STRATEGY]",
+                "Build Your App",
                 size="lg",
                 variant="primary",
                 loading=SubmitPromptState.is_processing,
@@ -322,17 +340,16 @@ def hero() -> rx.Component:
             side="right",
             class_name="lg:top-[65px] top-[45px] lg:h-[calc(100%-65px)] h-[calc(100%-45px)]",
         ),
-        rx.el.h1(
-            "AI-NATIVE SECURITY FOR EVERY DEVICE ON EARTH—AND BEYOND",
-            class_name="text-slate-12 lg:text-4xl text-3xl font-semibold text-center lg:max-w-[576px] word-wrap break-words lg:whitespace-pre-line",
-        ),
-        rx.el.p(
-            "Predictive. Autonomous. Unbroken. Orchestrate Predictive Maintenance, Device Management, and AutoSecOps from silicon to satellite.",
-            class_name="text-slate-11 dark:text-slate-9 text-xl text-center max-w-[640px]",
-        ),
-        rx.el.h2(
-            "From Natural Language to Autonomous Action.",
-            class_name="text-slate-12 text-2xl lg:text-3xl font-semibold text-center",
+        rx.el.div(
+            rx.el.h1(
+                "Prompt to Production App",
+                class_name="text-secondary-12 lg:text-4xl text-3xl font-semibold text-center max-lg:text-balance",
+            ),
+            rx.el.h2(
+                "A unified platform to build and deploy all in Python.",
+                class_name="text-secondary-10 lg:text-lg text-md font-medium text-center max-lg:text-pretty",
+            ),
+            class_name="flex flex-col items-center justify-center gap-3",
         ),
         prompt_box(),
         class_name="flex flex-col justify-center items-center gap-4 mx-auto w-full max-w-[64.19rem] lg:border-x border-slate-3 pb-[3rem] pt-28 lg:pt-[8rem] relative lg:overflow-hidden overflow-hidden z-[1] bg-transparent lg:bg-slate-1 lg:px-4",
