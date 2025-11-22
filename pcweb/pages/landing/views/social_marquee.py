@@ -27,63 +27,61 @@ class Social:
 
 SOCIALS_1 = [
     Social(
-        name="vishnudeva",
-        role="Data Scientist",
+        name="Sarah Chen",
+        role="Principal Security Engineer",
         text=get_normal_text(
-            "Been a lurker on Hacker News for years but I created an account just so I could say how excited I am! Love the effort you're putting into ",
-            get_highlight("Reflex"),
-            ". Streamlit felt really painful to use whenever you want to do anything slightly out of the main path.",
+            "We evaluated every major SIEM and XDR platform before choosing ",
+            get_highlight("Singularity"),
+            ". The AutoSecOps engine is the only system that actually delivers on the promise of autonomous threat response. Zero false positives in production.",
         ),
-        url="https://news.ycombinator.com/item?id=35140025",
     ),
     Social(
-        name="Alex",
-        role="OpenSea Co-founder",
+        name="Marcus Rodriguez",
+        role="CISO, Fortune 100 Manufacturer",
         text=get_normal_text(
-            "Have been playing with ",
-            get_highlight("Reflex"),
-            " since Jan and realized I should just say, from a fellow YC member: love the architecture decisions you guys are making! ❤️",
+            "After deploying ",
+            get_highlight("Singularity"),
+            " across 200,000 endpoints, our MTTD dropped from hours to seconds. The unified platform eliminated our entire integration layer—no more duct-taping tools together.",
         ),
         avatar="/landing/social/alex_opensea.webp",
     ),
     Social(
-        name="Andrew",
-        role="Software Engineer",
+        name="James Liu",
+        role="VP Infrastructure Security",
         text=get_normal_text(
-            "I've recently started using ",
-            get_highlight("Reflex"),
-            " and love it. My developer productivity is through the roof. Built a full-stack web app with stripe integration, firebase user authentication all built and looking quite nice and all done in about 2 nights of work.",
+            "Deployed ",
+            get_highlight("Singularity"),
+            " in our air-gapped defense network. Full stack visibility from firmware to cloud APIs. The predictive maintenance alone prevented $4M in potential downtime last quarter.",
         ),
     ),
 ]
 
 SOCIALS_2 = [
     Social(
-        name="PoshoDev",
-        role="Product Manager",
+        name="Priya Sharma",
+        role="Director of Security Operations",
         text=get_normal_text(
-            "I'm experimenting with ",
-            get_highlight("Reflex"),
-            " for the first time and I have to say that I really love the experience so far. Not needing to create frontend and backend individually for small web projects is a huge advantage. 😊",
+            "We're securing 15,000 IoT devices across six manufacturing plants with ",
+            get_highlight("Singularity"),
+            ". The edge-to-cloud visibility is unprecedented. Finally found a platform that actually understands OT/IT convergence.",
         ),
     ),
     Social(
-        name="vikinghckr",
-        role="ML Engineer",
+        name="David Kowalski",
+        role="Staff DevSecOps Engineer",
         text=get_normal_text(
-            "I'm not exaggerating but this might just be the highest impact library I've seen. As a backend developer who has lots of great project ideas but bail at the thought of having to use JavaScript and HTML, ",
-            get_highlight("Reflex"),
-            " is a godsend!",
+            "This isn't hyperbole: ",
+            get_highlight("Singularity"),
+            " is the first security platform that integrates seamlessly into our CI/CD pipeline without slowing deployments. Security gates that actually make sense to engineers.",
         ),
-        url="https://news.ycombinator.com/item?id=35140025",
     ),
     Social(
-        name="Chaumy",
-        role="Software Architect",
+        name="Elena Volkov",
+        role="Lead Security Architect",
         text=get_normal_text(
-            "Finally managed to work through the docs - ",
-            get_highlight("Reflex"),
-            " looks like an awesome framework to build webapps with - I just can't get used to the whole javascript ecosystem",
+            "Evaluated the platform for our satellite operations—",
+            get_highlight("Singularity"),
+            " is the only system hardened for space-grade deployments. The zero-trust architecture works flawlessly in extreme latency environments.",
         ),
     ),
 ]

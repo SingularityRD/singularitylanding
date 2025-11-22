@@ -46,7 +46,7 @@ class SubmitPromptState(rx.State):
         if prompt := form_data.get("prompt"):
             if len(prompt) < 5:
                 return rx.toast.warning(
-                    "Your prompt needs at least 5 characters. Please add more details.",
+                    "Threat intelligence file required (minimum 5 indicators)",
                 )
             random_uuid = uuid.uuid4()
             async with httpx.AsyncClient() as client:
@@ -81,7 +81,7 @@ class SubmitPromptState(rx.State):
         yield
         for first_file in files:
             if len(self._images) >= MAX_IMAGES_COUNT:
-                yield rx.toast.error("Maximum of 5 images allowed")
+                yield rx.toast.error("Maximum 5 threat intel files allowed")
                 yield rx.cancel_upload("upload-image-button")
                 self.is_uploading = False
                 return
@@ -100,7 +100,7 @@ class SubmitPromptState(rx.State):
             upload_data = await first_file.read()
             if len(upload_data) > MAX_FILE_SIZE_BYTES:
                 yield rx.toast.error(
-                    f"File too large, maximum size is {MAX_FILE_SIZE_MB}MB"
+                    f"File too large—maximum size is {MAX_FILE_SIZE_MB}MB"
                 )
                 yield rx.cancel_upload("upload-image-button")
                 self.is_uploading = False
@@ -210,40 +210,38 @@ def prompt_box() -> rx.Component:
                 show_default_prompt.value,
                 rx.el.span(
                     rx.el.span(
-                        "Build a dashboard with ",
-                        integration_text(
-                            "Databricks",
-                            "databricks",
-                        ),
-                        "metrics,",
+                        "Analyzing satellite constellation",
                         class_name="animate-[prompt-box-line] animate-duration-[200ms] animate-ease-out origin-left absolute top-3 left-5 h-10 pointer-events-none",
                     ),
                     rx.el.span(
-                        "use ",
-                        integration_text_light_dark(
-                            "Okta",
-                            "okta",
-                        ),
-                        "for auth, ping me on ",
-                        integration_text(
-                            "Slack",
-                            "slack",
-                        ),
+                        "security posture...",
+                        class_name="animate-[prompt-box-line] animate-duration-[200ms] animate-ease-out origin-left absolute top-8 left-5 h-10 animate-delay-100 animate-fill-both pointer-events-none",
+                    ),
+                    rx.el.span(
+                        "Cross-referencing global threat",
                         class_name="animate-[prompt-box-line] animate-duration-[200ms] animate-ease-out origin-left absolute top-13 left-5 h-10 animate-delay-200 animate-fill-both pointer-events-none",
                     ),
                     rx.el.span(
-                        "for critical metrics",
+                        "intelligence feeds...",
+                        class_name="animate-[prompt-box-line] animate-duration-[200ms] animate-ease-out origin-left absolute top-18 left-5 h-10 animate-delay-300 animate-fill-both pointer-events-none",
+                    ),
+                    rx.el.span(
+                        "Initiating autonomous defense",
+                        class_name="animate-[prompt-box-line] animate-duration-[200ms] animate-ease-out origin-left absolute top-23 left-5 h-10 animate-delay-400 animate-fill-both pointer-events-none",
+                    ),
+                    rx.el.span(
+                        "protocols...",
                         # Cursor
                         rx.el.span(
-                            class_name="w-0.5 h-8 bg-slate-12 animate-blink inline-block align-middle animate-fill-both animate-delay-450",
+                            class_name="w-0.5 h-8 bg-slate-12 animate-blink inline-block align-middle animate-fill-both animate-delay-550",
                         ),
-                        class_name="animate-[prompt-box-line] animate-duration-[200ms] animate-ease-out origin-left absolute top-23 left-5 h-10 animate-delay-400 animate-fill-both pointer-events-none",
+                        class_name="animate-[prompt-box-line] animate-duration-[200ms] animate-ease-out origin-left absolute top-28 left-5 h-10 animate-delay-500 animate-fill-both pointer-events-none",
                     ),
                     class_name="text-slate-11 dark:text-slate-9 text-xl leading-[2.5rem] font-medium cursor-text max-lg:hidden",
                 ),
                 rx.el.div(
                     rx.el.textarea(
-                        placeholder="What do you want to build?",
+                        placeholder="What do you want to secure?",
                         auto_focus=True,
                         id="prompt",
                         custom_attrs={
@@ -283,7 +281,7 @@ def prompt_box() -> rx.Component:
             rx.upload.root(
                 ui.button(
                     ui.icon(icon="AttachmentIcon"),
-                    "Attach",
+                    "Upload Threat Intel",
                     size="lg",
                     type="button",
                     variant="ghost",
@@ -301,7 +299,7 @@ def prompt_box() -> rx.Component:
                     "image/webp": [".webp"],
                 },
                 on_drop_rejected=rx.toast.error(
-                    f"Unsupported file type or file too large (Max {MAX_FILE_SIZE_MB}MB, up to {MAX_IMAGES_COUNT} files)."
+                    f"Unsupported file type or exceeds {MAX_FILE_SIZE_MB}MB limit (up to {MAX_IMAGES_COUNT} files)"
                 ),
                 max_files=MAX_IMAGES_COUNT,
                 max_size=MAX_FILE_SIZE_BYTES,
@@ -309,7 +307,7 @@ def prompt_box() -> rx.Component:
                 id="upload-image-button",
             ),
             ui.button(
-                "Build Your App",
+                "Deploy AutoSecOps",
                 size="lg",
                 variant="primary",
                 loading=SubmitPromptState.is_processing,
@@ -342,11 +340,11 @@ def hero() -> rx.Component:
         ),
         rx.el.div(
             rx.el.h1(
-                "Prompt to Production App",
+                "AI-Native Security for Every Device on Earth—and Beyond",
                 class_name="text-secondary-12 lg:text-4xl text-3xl font-semibold text-center max-lg:text-balance",
             ),
             rx.el.h2(
-                "A unified platform to build and deploy all in Python.",
+                "Autonomous defense. Predictive maintenance. Total device governance. From silicon to satellite—one unified platform.",
                 class_name="text-secondary-10 lg:text-lg text-md font-medium text-center max-lg:text-pretty",
             ),
             class_name="flex flex-col items-center justify-center gap-3",

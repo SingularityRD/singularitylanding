@@ -8,16 +8,16 @@ from pcweb.constants import REFLEX_BUILD_URL
 def content() -> rx.Component:
     return rx.el.div(
         rx.el.h2(
-            "Start building with Reflex.",
+            "The Future Is Autonomous. Command It.",
             class_name="text-slate-12 lg:text-4xl text-3xl font-semibold text-center",
         ),
         rx.el.h3(
-            "All in one platform in Python",
+            "From silicon to satellite.",
             class_name="text-slate-9 lg:text-4xl text-3xl font-semibold text-center",
         ),
         ui.link(
             render_=ui.button(
-                "Get Started with Reflex",
+                "Schedule Your Security Assessment",
                 size="lg",
                 class_name="font-semibold mt-8 h-10",
             ),

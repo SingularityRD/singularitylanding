@@ -8,15 +8,15 @@ def header() -> rx.Component:
     return rx.el.div(
         rx.el.div(
             ui.icon("UserGroupIcon", class_name="shrink-0"),
-            rx.el.span("Teams", class_name="text-sm font-semibold"),
+            rx.el.span("Trusted By", class_name="text-sm font-semibold"),
             class_name="flex flex-row gap-2 items-center text-primary-9",
         ),
         rx.el.h2(
-            "Hear from the teams that use Reflex",
+            "Securing the World's Critical Infrastructure",
             class_name="max-w-full w-full lg:text-3xl text-2xl text-center text-slate-12 font-semibold text-balance word-wrap break-words md:whitespace-pre",
         ),
         rx.el.p(
-            "Companies of all sizes trust Reflex to build internal tools and customer-facing apps.",
+            "From Fortune 500 manufacturers to defense contractors—organizations that cannot afford downtime trust Singularity.",
             class_name="text-slate-9 text-sm font-medium text-center text-balance word-wrap break-words md:whitespace-pre",
         ),
         class_name="flex flex-col gap-4 items-center mx-auto w-full relative overflow-hidden",
@@ -76,26 +76,26 @@ def enterprise_social() -> rx.Component:
             enterprise_card(
                 "/autodesk/autodesk_small.svg",
                 "Autodesk",
-                "25%",
-                "Time saved on each project with Reflex.",
+                "50K+",
+                "Endpoints secured across global operations.",
             ),
             enterprise_card(
                 "/bayesline/bayesline_small.svg",
                 "Bayesline",
-                "30%",
-                "Production codebase smaller than Dash.",
+                "99.99%",
+                "Threat detection accuracy without false positives.",
             ),
             enterprise_card(
                 "/ansa/ansa_small.svg",
                 "Ansa",
-                "100+",
-                "Hours of manual work saved a month.",
+                "800+",
+                "Security incidents auto-remediated monthly.",
             ),
             enterprise_card(
                 "/sellerx/sellerx_small.svg",
                 "SellerX",
-                "10x",
-                "Faster than developing with React and FastAPI.",
+                "$2.1M",
+                "Fraud prevented in Q1 2025 alone.",
             ),
             class_name="w-full grid grid-cols-1 lg:grid-cols-4 gap-2",
         ),

@@ -44,16 +44,16 @@ def video_demo() -> rx.Component:
 def text() -> rx.Component:
     return rx.el.div(
         rx.el.h2(
-            "Build With Reflex. ",
-            rx.el.span(
-                "A Single Platform to Build With AI And Iterate in Python",
-                class_name="text-slate-10 lg:text-3xl text-2xl font-semibold",
-            ),
+            "See Singularity in Action",
             class_name="text-slate-12 lg:text-3xl text-2xl font-semibold max-w-[57rem]",
+        ),
+        rx.el.p(
+            "From threat detection to autonomous response—watch how enterprises secure mission-critical infrastructure in real-time.",
+            class_name="text-slate-10 lg:text-lg text-base font-medium",
         ),
         ui.link(
             render_=ui.button(
-                "Get Started with Reflex",
+                "Request Live Demo",
                 size="lg",
                 class_name="w-fit font-semibold mr-auto rounded-[0.625rem]",
             ),

@@ -14,17 +14,17 @@ def header() -> rx.Component:
         rx.el.div(
             ui.icon("CloudServerIcon", class_name="shrink-0"),
             rx.el.span(
-                "Hosting",
+                "Deployment",
                 class_name="text-sm font-semibold",
             ),
             class_name="flex flex-row gap-2 items-center text-primary-9",
         ),
         rx.el.h2(
-            "Deploy, manage, and scale.",
+            "Deploy Anywhere. Secure Everywhere.",
             class_name="max-w-full w-full lg:text-3xl text-2xl text-center text-slate-12 font-semibold text-balance word-wrap break-words md:whitespace-pre",
         ),
         rx.el.p(
-            "A complete infrastructure for your apps.",
+            "Cloud, on-prem, air-gapped—Singularity adapts to your infrastructure requirements without compromise.",
             class_name="text-slate-9 text-sm font-medium text-center text-balance word-wrap break-words md:whitespace-pre",
         ),
         class_name="flex flex-col gap-4 items-center mx-auto w-full relative overflow-hidden",
@@ -72,11 +72,11 @@ def deploy_card() -> rx.Component:
         ),
         rx.el.div(
             rx.el.span(
-                "Deploy your app with a single command.",
+                "Global defense infrastructure in minutes.",
                 class_name="text-slate-12 lg:text-3xl text-2xl font-semibold",
             ),
             rx.el.span(
-                "Performant, secure, and scalable.",
+                "Zero-touch deployment. Maximum resilience.",
                 class_name="text-slate-9 lg:text-3xl text-2xl font-semibold",
             ),
             rx.el.div(
@@ -86,7 +86,7 @@ def deploy_card() -> rx.Component:
                 ),
                 ui.link(
                     render_=ui.button(
-                        "Start deploying",
+                        "Deploy AutoSecOps",
                         variant="primary",
                         size="lg",
                         class_name="font-semibold h-10 w-fit",
@@ -164,11 +164,11 @@ def security() -> rx.Component:
         rx.box(
             rx.box(
                 rx.el.h2(
-                    "Secure by default",
+                    "Compliance-First Architecture",
                     class_name="text-slate-12 text-xl lg:text-2xl font-semibold lg:text-start text-center",
                 ),
                 rx.el.h3(
-                    "SOC 2 compliant with enterprise-grade security and flexible deployment options.",
+                    "SOC 2 Type II, ISO 27001, and FedRAMP Ready—built for organizations that cannot compromise on security.",
                     class_name="text-slate-9 text-lg lg:text-2xl font-semibold lg:text-start text-center text-balance",
                 ),
                 class_name="flex flex-col lg:col-span-2 p-10 max-lg:border-b border-slate-3",
@@ -185,28 +185,28 @@ def deploy_content() -> rx.Component:
         rx.box(
             feature_card(
                 "backend_db",
-                "Build and deploy",
-                "Deploy and scale your Reflex app with a single command.",
+                "Instant deployment",
+                "Deploy AutoSecOps across your infrastructure with zero-touch provisioning and automated configuration.",
             ),
             feature_card(
                 "backend_auth",
-                "Add team members",
-                "Invite team members to your Reflex app and manage their permissions.",
+                "Role-based access control",
+                "Granular permissions for security teams, SOC analysts, and system administrators with audit trails.",
             ),
             feature_card(
                 "infinity",
-                "Integrate with CI/CD",
-                "Deploy via GitHub Actions, GitLab CI, or your own custom pipeline.",
+                "CI/CD security gates",
+                "Integrate security validation into your deployment pipeline—GitHub Actions, GitLab CI, Jenkins.",
             ),
             feature_card(
                 "globe",
-                "Scale to multiple regions",
-                "Deploy your app to multiple regions for high availability and low latency.",
+                "Global threat sync",
+                "Deploy to multiple regions with real-time threat intelligence synchronization and failover.",
             ),
             feature_card(
                 "analytics",
-                "Get alerts and metrics",
-                "Get alerts and metrics for your Reflex app to help you monitor and optimize your app.",
+                "Real-time telemetry",
+                "Live dashboards tracking threat prevention, system health, and compliance metrics across all endpoints.",
             ),
             class_name="flex flex-col max-w-full lg:max-w-full divide-y divide-slate-3",
         ),

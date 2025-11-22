@@ -25,18 +25,18 @@ def stat_card(
 def stats_grid() -> rx.Component:
     return rx.box(
         stat_card(
-            stat=f"{GITHUB_STARS:,}+",
-            text="Stars",
+            stat="SOC 2 Type II Certified",
+            text="Certified",
             icon="star",
         ),
         stat_card(
-            stat=f"{CONTRIBUTORS:,}+",
-            text="Contributors",
+            stat="ISO 27001 Compliant",
+            text="Compliant",
             icon="fork",
         ),
         stat_card(
-            stat=f"{DISCORD_USERS:,}+",
-            text="Discord",
+            stat="FedRAMP Ready",
+            text="Ready",
             icon="discord_navbar",
         ),
         class_name="grid grid-cols-1 lg:grid-cols-3 gap-0 grid-rows-1 w-full divide-slate-3 lg:divide-x max-lg:divide-y",
