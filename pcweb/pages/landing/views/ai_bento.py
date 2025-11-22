@@ -8,15 +8,15 @@ def header() -> rx.Component:
     return rx.el.div(
         rx.el.div(
             ui.icon("Layers01Icon", class_name="shrink-0"),
-            rx.el.span("Features", class_name="text-sm font-semibold"),
+            rx.el.span("Capabilities", class_name="text-sm font-semibold"),
             class_name="flex flex-row gap-2 items-center text-primary-9",
         ),
         rx.el.h2(
-            "Generate your app with AI",
+            "Full-Spectrum Defense Architecture",
             class_name="max-w-full w-full lg:text-3xl text-2xl text-center text-slate-12 font-semibold text-balance word-wrap break-words md:whitespace-pre",
         ),
         rx.el.p(
-            "Build production-ready web apps in seconds with AI-powered code generation.",
+            "From threat hunting to autonomous response—enterprise security reimagined for the cyber-physical era.",
             class_name="text-slate-9 text-sm font-medium text-center text-balance word-wrap break-words md:whitespace-pre",
         ),
         class_name="flex flex-col gap-4 items-center mx-auto w-full relative overflow-hidden",
@@ -65,34 +65,34 @@ def frontend_card(
 def bento_cards() -> rx.Component:
     return rx.el.div(
         frontend_card(
-            title="Work With UI and Backend in 100% Python",
+            title="AutoSecOps Orchestration",
             description=(
-                "Generate and refine UI and backend in 100% Python.\n"
-                "No JavaScript or frontend frameworks required"
+                "Self-healing infrastructure that detects, isolates, and remediates "
+                "threats in under 100ms. Zero-touch incident response from IoT edge to cloud."
             ),
             image="bento1.webp",
             cols="2",
         ),
         frontend_card(
-            title="Integrate With Tools",
-            description="Over 100+ integrations are available.",
+            title="Cyber Threat Intelligence",
+            description="Real-time aggregation of 50+ global threat feeds, OSINT, and proprietary research. Proactive defense against emerging APTs.",
             image="bento2.webp",
         ),
         frontend_card(
-            title="Research Web",
-            description="Reflex AI finds the best way to implement new features and fix your code.",
+            title="Web Application Firewall",
+            description="ML-powered WAF with behavioral analysis. Block OWASP Top 10, API abuse, and bot attacks with sub-5ms latency.",
             image="bento3.webp",
         ),
         frontend_card(
-            title="Build with Visual References",
-            description="Pass it screenshots, and even video, Figma design",
+            title="Fraud Detection & Prevention",
+            description="Behavioral biometrics and transaction pattern analysis. Stop account takeover, payment fraud, and credential stuffing in real-time.",
             image="bento4.webp",
             cols="2",
         ),
         frontend_card(
-            title="Test Any App",
+            title="Deep-Web Threat Hunting",
             description=(
-                "Reflex simulates real users interaction and debugs the app for you."
+                "AI agents monitor dark web forums, paste sites, and underground channels 24/7 for leaked credentials, exploits, and targeting intelligence."
             ),
             image="bento5.webp",
             cols="2",

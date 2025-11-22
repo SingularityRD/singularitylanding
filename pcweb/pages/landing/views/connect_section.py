@@ -9,15 +9,15 @@ def header() -> rx.Component:
     return rx.el.div(
         rx.el.div(
             ui.icon("DatabaseAddIcon", class_name="shrink-0"),
-            rx.el.span("Data", class_name="text-sm font-semibold"),
+            rx.el.span("Data Sources", class_name="text-sm font-semibold"),
             class_name="flex flex-row gap-2 items-center text-primary-9",
         ),
         rx.el.h2(
-            "Connect to Any Data Source",
+            "Ingest Telemetry From Every Layer",
             class_name="max-w-full w-full lg:text-3xl text-2xl text-center text-slate-12 font-semibold text-balance word-wrap break-words md:whitespace-pre",
         ),
         rx.el.p(
-            "Build powerful data-driven apps with seamless integrations to APIs, databases, Python libraries, and file formats.",
+            "Centralize security logs, hardware signals, and threat intelligence from edge to cloud for unified situational awareness.",
             class_name="text-slate-9 text-sm font-medium text-center text-balance word-wrap break-words md:whitespace-pre",
         ),
         class_name="flex flex-col gap-4 items-center mx-auto w-full relative overflow-hidden",
@@ -50,23 +50,23 @@ def connect_section() -> rx.Component:
         rx.el.div(
             connect_card(
                 "api",
-                "API",
-                "Integrate with any REST or GraphQL API to fetch and sync data in real-time",
+                "APIs & Web Services",
+                "Integrate REST, GraphQL, and webhook endpoints. Real-time data sync from SaaS platforms and internal services.",
             ),
             connect_card(
                 "python",
-                "Python Library/SDK",
-                "Import any Python package to extend functionality with data tools and more",
+                "IoT Sensors & Edge Devices",
+                "Monitor voltage, temperature, network patterns, and signal integrity directly from hardware endpoints.",
             ),
             connect_card(
                 "db",
-                "Database",
-                "Connect to PostgreSQL, MySQL, MongoDB, or any database to power your app",
+                "Databases & SIEM Systems",
+                "Connect to SQL, NoSQL, Splunk, Sentinel, and legacy SIEM platforms for unified log aggregation.",
             ),
             connect_card(
                 "doc",
-                "File Types",
-                "Process and display CSV, Excel, PDF, images, and other file formats seamlessly",
+                "Unstructured Logs & Packets",
+                "Parse pcap files, syslog dumps, and proprietary formats for forensic analysis and anomaly detection.",
             ),
             class_name="w-full grid grid-cols-1 lg:grid-cols-2 lg:border-l border-slate-3",
         ),

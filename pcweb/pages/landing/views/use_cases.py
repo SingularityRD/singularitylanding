@@ -5,12 +5,12 @@ from reflex.experimental.client_state import ClientStateVar
 from pcweb.components.numbers_pattern import numbers_pattern
 
 items = [
-    ("Analytics", "Analytics01Icon"),
-    ("Finance", "CreditCardPosIcon"),
-    ("E-commerce", "ShoppingBasket03Icon"),
-    ("DevOps", "CloudServerIcon"),
-    ("Databases", "Database02Icon"),
-    ("AI Workflows", "MagicWand01Icon"),
+    ("Automotive & EV", "Analytics01Icon"),
+    ("Energy Grid", "CreditCardPosIcon"),
+    ("Defense & Aerospace", "ShoppingBasket03Icon"),
+    ("Space & Satellite", "CloudServerIcon"),
+    ("Smart City", "Database02Icon"),
+    ("Industrial IoT", "MagicWand01Icon"),
 ]
 
 selected_industry = ClientStateVar.create(
@@ -22,15 +22,15 @@ def header() -> rx.Component:
     return rx.el.div(
         rx.el.div(
             ui.icon("BrowserIcon", class_name="shrink-0"),
-            rx.el.span("Use Cases", class_name="text-sm font-semibold"),
+            rx.el.span("Industries", class_name="text-sm font-semibold"),
             class_name="flex flex-row gap-2 items-center text-primary-9",
         ),
         rx.el.h2(
-            "Use Cases by Industry",
+            "Securing Mission-Critical Sectors",
             class_name="max-w-full w-full lg:text-3xl text-2xl text-center text-slate-12 font-semibold text-balance word-wrap break-words md:whitespace-pre",
         ),
         rx.el.p(
-            "See what’s built with Reflex.",
+            "From automotive to aerospace—trusted by those who cannot afford downtime.",
             class_name="text-slate-9 text-sm font-medium text-center text-balance word-wrap break-words md:whitespace-pre",
         ),
         class_name="flex flex-col gap-4 items-center mx-auto w-full relative overflow-hidden",

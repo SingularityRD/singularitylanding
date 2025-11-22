@@ -10,17 +10,17 @@ def header() -> rx.Component:
         rx.el.div(
             ui.icon("Layers01Icon", class_name="shrink-0"),
             rx.el.span(
-                "Open Source",
+                "Architecture",
                 class_name="text-sm font-semibold",
             ),
             class_name="flex flex-row gap-2 items-center text-primary-9",
         ),
         rx.el.h2(
-            "Built on our Open Source Python Framework",
+            "Built on Zero-Trust Architecture",
             class_name="max-w-full w-full lg:text-3xl text-2xl text-center text-slate-12 font-semibold text-balance word-wrap break-words md:whitespace-pre",
         ),
         rx.el.p(
-            "Reflex is the only solution that gives you full flexibility while staying in the language your team knows - Python.",
+            "Singularity is the only platform that secures the entire stack—from hardware firmware to cloud APIs—with end-to-end encryption and continuous verification.",
             class_name="text-slate-9 text-sm font-medium text-center text-balance word-wrap break-words md:whitespace-pre",
         ),
         class_name="flex flex-col gap-4 items-center mx-auto w-full relative overflow-hidden",

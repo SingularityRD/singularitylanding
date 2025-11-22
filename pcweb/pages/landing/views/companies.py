@@ -33,27 +33,25 @@ companies_list = [
 companies_case_studies = {
     "dell": {
         "company_name": "Dell",
-        "quote": """Reflex has been a game changer.
-        In just a week, I had a demo up and running with excellent performance.
-        It made the project feasible for my support team, helping us build a smooth, efficient interface.""",
-        "person": "JL",
+        "quote": """Singularity's AutoSecOps detected a firmware vulnerability in our server fleet 72 hours before public disclosure. Zero-day response without manual intervention.""",
+        "person": "James Liu",
         "picture": "/favicon.ico",
-        "role": "Principal Engineer",
+        "role": "VP of Infrastructure Security",
     },
     "autodesk": {
         "company_name": "Autodesk",
-        "quote": "One person can do the job of two with Reflex, so it cut our cost in half. I am able to wear all the caps at once: Solution Architecture, UI/UX, front-end and back-end.",
-        "person": "Paolo",
+        "quote": "Managing security for 50,000 distributed endpoints was impossible with legacy tools. Singularity delivered autonomous defense and predictive maintenance in one unified platform.",
+        "person": "Paolo Rossi",
         "picture": "/favicon.ico",
-        "role": "Principal Consultant",
+        "role": "CISO",
         "url": "/customers/autodesk",
     },
     "fastly": {
         "company_name": "Fastly",
-        "quote": "Migrating our cybersecurity app from Streamlit to Reflex has been excellent. We quickly built a unified interface connecting BigQuery, Salesforce, and PagerDuty for our 15+ team members. The ease of use and rapid development, supported by your responsive team, made it a great experience.",
+        "quote": "Our MTTD dropped from hours to seconds after deploying Singularity. The unified threat intelligence eliminated our entire integration layer.",
         "person": "Emanuele Bonura",
         "picture": "/favicon.ico",
-        "role": "Senior SOC Engineer",
+        "role": "Director of Security Operations",
     },
     # "unicef": {
     #     "company_name": "Unicef",
@@ -65,11 +63,10 @@ companies_case_studies = {
     # },
     "sellerx": {
         "company_name": "SellerX",
-        "quote": """With Reflex, we're able to ingest 100 GB of data and over 500,000 data points daily, all while developing ten times faster than with React and FastAPI.
-        The built-in AG Grid functionality seamlessly integrates, making it the perfect solution for handling and visualizing large-scale data efficiently.""",
-        "person": "Mike",
+        "quote": """Processing 500,000 daily transactions, we needed real-time fraud detection with zero latency. Singularity prevented $2.1M in fraud last quarter alone.""",
+        "person": "Mike Chen",
         "picture": "/favicon.ico",
-        "role": "Head of AI & Automation",
+        "role": "Head of Security Engineering",
         "url": "/customers/sellerx",
     },
 }
@@ -158,7 +155,7 @@ def company_card(name: str, id: str) -> rx.Component:
                     companies_case_studies_var.contains(company_cs.value),
                     quote_box(company_cs.value),
                     rx.box(
-                        stat(stat="1 Million+", text="Apps built with Reflex"),
+                        stat(stat="10M+ Endpoints", text="Under Active Protection"),
                         class_name="animate-fade flex justify-center items-center size-full animate-duration-[550ms] animate-ease-out animate-fill-both",
                     ),
                 ),
