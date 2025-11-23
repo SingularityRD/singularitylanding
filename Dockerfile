@@ -29,5 +29,5 @@ RUN uv run reflex export --frontend-only --no-zip
 # Expose port
 EXPOSE 3000 8000
 
-# Start the app
-CMD ["uv", "run", "reflex", "run", "--env", "prod", "--loglevel", "info"]
+# Start the app (backend only - frontend already exported)
+CMD ["uv", "run", "reflex", "run", "--env", "prod", "--backend-only", "--loglevel", "info"]
