@@ -2,10 +2,10 @@
 nixPkgs = ["python312", "nodejs_20"]
 
 [phases.install]
-cmds = ["pip install uv", "uv sync --locked"]
+cmds = ["python -m pip install --upgrade pip", "python -m pip install uv", "uv sync --locked"]
 
 [phases.build]
-cmds = ["reflex export --frontend-only --no-zip"]
+cmds = ["uv run reflex export --frontend-only --no-zip"]
 
 [start]
-cmd = "reflex run --env prod"
+cmd = "uv run reflex run --env prod"

@@ -4,9 +4,9 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "reflex run --env prod --backend-only",
-    "healthcheckPath": "/ping",
-    "healthcheckTimeout": 100,
+    "startCommand": "uv run reflex run --env prod",
+    "healthcheckPath": "/",
+    "healthcheckTimeout": 300,
     "restartPolicyType": "ON_FAILURE"
   }
 }

@@ -1,1 +1,1 @@
-web: reflex run --env prod --loglevel info
+web: uv run reflex run --env prod --loglevel info
