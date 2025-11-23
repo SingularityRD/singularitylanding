@@ -20,6 +20,9 @@ COPY . .
 # Install Python dependencies
 RUN uv sync --locked
 
+# Create whitelist.py for production build (not in git, needed for build)
+RUN echo 'WHITELISTED_PAGES = []\n\ndef _check_whitelisted_path(path: str) -> bool:\n    return not WHITELISTED_PAGES or path in WHITELISTED_PAGES' > pcweb/whitelist.py
+
 # Export frontend
 RUN uv run reflex export --frontend-only --no-zip
 
