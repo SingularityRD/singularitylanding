@@ -4,7 +4,7 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "$HOME/.cargo/bin/uv run reflex run --env prod",
+    "startCommand": "~/.local/bin/uv run reflex run --env prod",
     "healthcheckPath": "/",
     "healthcheckTimeout": 300,
     "restartPolicyType": "ON_FAILURE"
