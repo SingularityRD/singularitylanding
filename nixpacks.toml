@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = ["python312", "nodejs_20"]
+
+[phases.install]
+cmds = ["pip install uv", "uv sync --locked"]
+
+[phases.build]
+cmds = ["reflex export --frontend-only --no-zip"]
+
+[start]
+cmd = "reflex run --env prod"
