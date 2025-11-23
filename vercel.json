@@ -1,5 +1,5 @@
 {
-  "buildCommand": "uv run reflex export --frontend-only --no-zip && cd .web && npm install && npm run build",
+  "buildCommand": "uv run reflex export --frontend-only --no-zip && cd .web && npm install --legacy-peer-deps && npm run build",
   "outputDirectory": ".web/out",
   "installCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh && ~/.local/bin/uv sync --locked",
   "framework": null,
