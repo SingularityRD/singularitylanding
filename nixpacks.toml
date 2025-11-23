@@ -4,11 +4,11 @@ nixPkgs = ["python312", "nodejs_20"]
 [phases.install]
 cmds = [
   "curl -LsSf https://astral.sh/uv/install.sh | sh",
-  "$HOME/.cargo/bin/uv sync --locked"
+  "~/.local/bin/uv sync --locked"
 ]
 
 [phases.build]
-cmds = ["$HOME/.cargo/bin/uv run reflex export --frontend-only --no-zip"]
+cmds = ["~/.local/bin/uv run reflex export --frontend-only --no-zip"]
 
 [start]
-cmd = "$HOME/.cargo/bin/uv run reflex run --env prod"
+cmd = "~/.local/bin/uv run reflex run --env prod"
